@@ -15,7 +15,7 @@ jobs:
 
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 4.2.4
+          haxe-version: 3.4.7
 
       - name: Install Haxelib
         run: |
@@ -26,7 +26,7 @@ jobs:
           haxelib install flixel 5.2.2
           haxelib install flixel-tools
           haxelib install flixel-ui
-          haxelib install flixel-addons 2.10.0
+          haxelib install flixel-addons
           haxelib install tjson
           haxelib install hxjsonast
           haxelib git linc_luajit https://github.com/AndreiRudenko/linc_luajit
@@ -55,7 +55,7 @@ jobs:
 
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 4.2.4
+          haxe-version: 3.4.7
 
       - name: Install Haxelib
         shell: cmd
@@ -67,7 +67,7 @@ jobs:
           haxelib install flixel 5.2.2
           haxelib install flixel-tools
           haxelib install flixel-ui
-          haxelib install flixel-addons 2.10.0
+          haxelib install flixel-addons
           haxelib install tjson
           haxelib install hxjsonast
           haxelib git linc_luajit https://github.com/AndreiRudenko/linc_luajit
@@ -96,7 +96,7 @@ jobs:
 
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 4.2.4
+          haxe-version: 3.4.7
 
       - name: Install Haxelib
         run: |
@@ -107,7 +107,7 @@ jobs:
           haxelib install flixel 5.2.2
           haxelib install flixel-tools
           haxelib install flixel-ui
-          haxelib install flixel-addons 2.10.0
+          haxelib install flixel-addons
           haxelib install tjson
           haxelib install hxjsonast
           haxelib git linc_luajit https://github.com/AndreiRudenko/linc_luajit
