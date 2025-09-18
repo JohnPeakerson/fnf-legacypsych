@@ -15,15 +15,15 @@ jobs:
 
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 3.4.7
+          haxe-version: 4.2.4
 
       - name: Install Haxelib
         run: |
           haxelib setup ~/haxelib
           haxelib install hxcpp
-          haxelib install lime 7.7.0
-          haxelib install openfl 8.7.0
-          haxelib install flixel 5.2.2
+          haxelib install lime 7.9.0        # Haxe 4 compatible
+          haxelib install openfl 9.0.0      # Haxe 4 compatible
+          haxelib install flixel 5.3.1      # Haxe 4 compatible
           haxelib install flixel-tools
           haxelib install flixel-ui
           haxelib install flixel-addons
@@ -55,16 +55,16 @@ jobs:
 
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 3.4.7
+          haxe-version: 4.2.4
 
       - name: Install Haxelib
         shell: cmd
         run: |
           haxelib setup C:/haxelib
           haxelib install hxcpp
-          haxelib install lime 7.7.0
-          haxelib install openfl 8.7.0
-          haxelib install flixel 5.2.2
+          haxelib install lime 7.9.0
+          haxelib install openfl 9.0.0
+          haxelib install flixel 5.3.1
           haxelib install flixel-tools
           haxelib install flixel-ui
           haxelib install flixel-addons
@@ -96,15 +96,15 @@ jobs:
 
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 3.4.7
+          haxe-version: 4.2.4
 
       - name: Install Haxelib
         run: |
           haxelib setup ~/haxelib
           haxelib install hxcpp
-          haxelib install lime 7.7.0
-          haxelib install openfl 8.7.0
-          haxelib install flixel 5.2.2
+          haxelib install lime 7.9.0
+          haxelib install openfl 9.0.0
+          haxelib install flixel 5.3.1
           haxelib install flixel-tools
           haxelib install flixel-ui
           haxelib install flixel-addons
