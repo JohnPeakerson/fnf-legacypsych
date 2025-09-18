@@ -15,22 +15,25 @@ jobs:
 
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 4.2.4
+          haxe-version: 4.2.5 # Using 4.2.5 is slightly more stable
 
       - name: Install Haxelib
         run: |
+          # Pinning libraries to versions compatible with Psych Engine 0.5.2h
           haxelib setup ~/haxelib
-          haxelib install hxcpp
-          haxelib install lime 7.7.0        # Oldest Haxe 4 compatible Lime
-          haxelib install openfl 8.9.6      # Oldest Haxe 4 compatible OpenFL
-          haxelib install flixel 5.2.2      # Oldest Haxe 4 compatible Flixel
-          haxelib install flixel-tools
-          haxelib install flixel-ui
-          haxelib install flixel-addons
-          haxelib install tjson
-          haxelib install hxjsonast
+          haxelib install hxcpp 4.2.1
+          haxelib install lime 7.9.0
+          haxelib install openfl 9.1.0
+          haxelib install flixel 4.11.0
+          haxelib install flixel-tools 1.5.1
+          haxelib install flixel-ui 2.4.0
+          haxelib install flixel-addons 2.11.0
+          haxelib install tjson 1.4.0
+          haxelib install hxjsonast 1.1.0
+
+          # Git libraries - these are generally fine as is
           haxelib git linc_luajit https://github.com/AndreiRudenko/linc_luajit
-          haxelib install hscript
+          haxelib install hscript 2.4.0
           haxelib git hscript-ex https://github.com/ianharrigan/hscript-ex
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
           haxelib install hxcpp-debug-server
@@ -55,23 +58,23 @@ jobs:
 
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 4.2.4
+          haxe-version: 4.2.5
 
       - name: Install Haxelib
         shell: cmd
         run: |
           haxelib setup C:/haxelib
-          haxelib install hxcpp
-          haxelib install lime 7.7.0
-          haxelib install openfl 8.9.6
-          haxelib install flixel 5.2.2
-          haxelib install flixel-tools
-          haxelib install flixel-ui
-          haxelib install flixel-addons
-          haxelib install tjson
-          haxelib install hxjsonast
+          haxelib install hxcpp 4.2.1
+          haxelib install lime 7.9.0
+          haxelib install openfl 9.1.0
+          haxelib install flixel 4.11.0
+          haxelib install flixel-tools 1.5.1
+          haxelib install flixel-ui 2.4.0
+          haxelib install flixel-addons 2.11.0
+          haxelib install tjson 1.4.0
+          haxelib install hxjsonast 1.1.0
           haxelib git linc_luajit https://github.com/AndreiRudenko/linc_luajit
-          haxelib install hscript
+          haxelib install hscript 2.4.0
           haxelib git hscript-ex https://github.com/ianharrigan/hscript-ex
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
           haxelib install hxcpp-debug-server
@@ -96,22 +99,22 @@ jobs:
 
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 4.2.4
+          haxe-version: 4.2.5
 
       - name: Install Haxelib
         run: |
           haxelib setup ~/haxelib
-          haxelib install hxcpp
-          haxelib install lime 7.7.0
-          haxelib install openfl 8.9.6
-          haxelib install flixel 5.2.2
-          haxelib install flixel-tools
-          haxelib install flixel-ui
-          haxelib install flixel-addons
-          haxelib install tjson
-          haxelib install hxjsonast
+          haxelib install hxcpp 4.2.1
+          haxelib install lime 7.9.0
+          haxelib install openfl 9.1.0
+          haxelib install flixel 4.11.0
+          haxelib install flixel-tools 1.5.1
+          haxelib install flixel-ui 2.4.0
+          haxelib install flixel-addons 2.11.0
+          haxelib install tjson 1.4.0
+          haxelib install hxjsonast 1.1.0
           haxelib git linc_luajit https://github.com/AndreiRudenko/linc_luajit
-          haxelib install hscript
+          haxelib install hscript 2.4.0
           haxelib git hscript-ex https://github.com/ianharrigan/hscript-ex
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
           haxelib install hxcpp-debug-server
