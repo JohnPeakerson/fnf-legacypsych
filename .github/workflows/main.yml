@@ -21,9 +21,9 @@ jobs:
         run: |
           haxelib setup ~/haxelib
           haxelib install hxcpp
-          haxelib install lime 7.9.0        # Haxe 4 compatible
-          haxelib install openfl 9.0.0      # Haxe 4 compatible
-          haxelib install flixel 5.3.1      # Haxe 4 compatible
+          haxelib install lime 7.7.0        # Oldest Haxe 4 compatible Lime
+          haxelib install openfl 8.9.6      # Oldest Haxe 4 compatible OpenFL
+          haxelib install flixel 5.2.2      # Oldest Haxe 4 compatible Flixel
           haxelib install flixel-tools
           haxelib install flixel-ui
           haxelib install flixel-addons
@@ -62,9 +62,9 @@ jobs:
         run: |
           haxelib setup C:/haxelib
           haxelib install hxcpp
-          haxelib install lime 7.9.0
-          haxelib install openfl 9.0.0
-          haxelib install flixel 5.3.1
+          haxelib install lime 7.7.0
+          haxelib install openfl 8.9.6
+          haxelib install flixel 5.2.2
           haxelib install flixel-tools
           haxelib install flixel-ui
           haxelib install flixel-addons
@@ -102,9 +102,9 @@ jobs:
         run: |
           haxelib setup ~/haxelib
           haxelib install hxcpp
-          haxelib install lime 7.9.0
-          haxelib install openfl 9.0.0
-          haxelib install flixel 5.3.1
+          haxelib install lime 7.7.0
+          haxelib install openfl 8.9.6
+          haxelib install flixel 5.2.2
           haxelib install flixel-tools
           haxelib install flixel-ui
           haxelib install flixel-addons
