@@ -17,30 +17,40 @@ jobs:
         with:
           haxe-version: 4.2.4
 
-      - name: Install Haxelib and Dependencies
+      - name: Install Haxelib with Pinned Versions
         run: |
           haxelib setup ~/haxelib
-          haxelib install hxcpp
+
+          # core libs
+          haxelib install hxcpp 4.2.1
           haxelib install lime 7.9.0
-          haxelib install openfl 9.1.0
-          haxelib install flixel 5.2.2
-          haxelib install flixel-tools
-          haxelib install flixel-ui
-          haxelib install flixel-addons
-          haxelib install tjson
-          haxelib install hxjsonast
+          haxelib install openfl 9.0.0
+
+          # Psych Engine / Flixel core
+          haxelib install flixel 5.3.1
+
+          # Addons & extras — you may need to adjust if some are incompatible
+          haxelib install flixel-tools 1.5.1
+          haxelib install flixel-ui 2.5.0
+          # Choose flixel-addons version compatible with 5.3.1
+          haxelib install flixel-addons 3.3.2
+
+          # Other supporting libs
+          haxelib install tjson 1.4.0
+          haxelib install hxjsonast 1.1.0
           haxelib git linc_luajit https://github.com/AndreiRudenko/linc_luajit
-          haxelib install hscript
+          haxelib install hscript 2.5.0
           haxelib git hscript-ex https://github.com/ianharrigan/hscript-ex
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
-          haxelib install hxcpp-debug-server
+          haxelib install hxcpp-debug-server 1.2.4
+
           haxelib list
 
       - name: Create Version Tag
         run: echo "${{ github.run_id }}" > VERSION
 
       - name: Compile (Linux)
-        run: haxelib run lime build Project.xml linux --app-version="4.0.0-${{ github.run_id }}"
+        run: haxelib run lime build Project.xml linux --app-version="0.5.2h-${{ github.run_id }}"
 
       - name: Publish Artifact (Linux)
         uses: actions/upload-artifact@v4
@@ -57,31 +67,33 @@ jobs:
         with:
           haxe-version: 4.2.4
 
-      - name: Install Haxelib and Dependencies
+      - name: Install Haxelib with Pinned Versions
         shell: cmd
         run: |
           haxelib setup C:/haxelib
-          haxelib install hxcpp
+
+          haxelib install hxcpp 4.2.1
           haxelib install lime 7.9.0
-          haxelib install openfl 9.1.0
-          haxelib install flixel 5.2.2
-          haxelib install flixel-tools
-          haxelib install flixel-ui
-          haxelib install flixel-addons
-          haxelib install tjson
-          haxelib install hxjsonast
+          haxelib install openfl 9.0.0
+          haxelib install flixel 5.3.1
+          haxelib install flixel-tools 1.5.1
+          haxelib install flixel-ui 2.5.0
+          haxelib install flixel-addons 3.3.2
+          haxelib install tjson 1.4.0
+          haxelib install hxjsonast 1.1.0
           haxelib git linc_luajit https://github.com/AndreiRudenko/linc_luajit
-          haxelib install hscript
+          haxelib install hscript 2.5.0
           haxelib git hscript-ex https://github.com/ianharrigan/hscript-ex
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
-          haxelib install hxcpp-debug-server
+          haxelib install hxcpp-debug-server 1.2.4
+
           haxelib list
 
       - name: Create Version Tag
         run: echo "${{ github.run_id }}" > VERSION
 
       - name: Compile (Windows)
-        run: haxelib run lime build Project.xml windows --app-version="4.0.0-${{ github.run_id }}"
+        run: haxelib run lime build Project.xml windows --app-version="0.5.2h-${{ github.run_id }}"
 
       - name: Publish Artifact (Windows)
         uses: actions/upload-artifact@v4
@@ -98,30 +110,32 @@ jobs:
         with:
           haxe-version: 4.2.4
 
-      - name: Install Haxelib and Dependencies
+      - name: Install Haxelib with Pinned Versions
         run: |
           haxelib setup ~/haxelib
-          haxelib install hxcpp
+
+          haxelib install hxcpp 4.2.1
           haxelib install lime 7.9.0
-          haxelib install openfl 9.1.0
-          haxelib install flixel 5.2.2
-          haxelib install flixel-tools
-          haxelib install flixel-ui
-          haxelib install flixel-addons
-          haxelib install tjson
-          haxelib install hxjsonast
+          haxelib install openfl 9.0.0
+          haxelib install flixel 5.3.1
+          haxelib install flixel-tools 1.5.1
+          haxelib install flixel-ui 2.5.0
+          haxelib install flixel-addons 3.3.2
+          haxelib install tjson 1.4.0
+          haxelib install hxjsonast 1.1.0
           haxelib git linc_luajit https://github.com/AndreiRudenko/linc_luajit
-          haxelib install hscript
+          haxelib install hscript 2.5.0
           haxelib git hscript-ex https://github.com/ianharrigan/hscript-ex
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
-          haxelib install hxcpp-debug-server
+          haxelib install hxcpp-debug-server 1.2.4
+
           haxelib list
 
       - name: Create Version Tag
         run: echo "${{ github.run_id }}" > VERSION
 
       - name: Compile (Mac)
-        run: haxelib run lime build Project.xml mac --app-version="4.0.0-${{ github.run_id }}"
+        run: haxelib run lime build Project.xml mac --app-version="0.5.2h-${{ github.run_id }}"
 
       - name: Publish Artifact (Mac)
         uses: actions/upload-artifact@v4
