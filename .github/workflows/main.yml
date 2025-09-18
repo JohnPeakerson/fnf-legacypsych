@@ -24,7 +24,7 @@ jobs:
           # Core libraries
           haxelib install hxcpp 4.2.1
           haxelib install lime 7.7.0
-          haxelib install openfl 8.9.6
+          haxelib install openfl 8.7.3
 
           # Flixel
           haxelib install flixel 5.2.2
@@ -71,7 +71,7 @@ jobs:
 
           haxelib install hxcpp 4.2.1
           haxelib install lime 7.7.0
-          haxelib install openfl 8.9.6
+          haxelib install openfl 8.7.3
           haxelib install flixel 5.2.2
           haxelib install flixel-tools 1.5.1
           haxelib install flixel-ui 2.5.0
@@ -113,7 +113,7 @@ jobs:
 
           haxelib install hxcpp 4.2.1
           haxelib install lime 7.7.0
-          haxelib install openfl 8.9.6
+          haxelib install openfl 8.7.3
           haxelib install flixel 5.2.2
           haxelib install flixel-tools 1.5.1
           haxelib install flixel-ui 2.5.0
