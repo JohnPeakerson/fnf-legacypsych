@@ -74,7 +74,7 @@ class FlxVideo extends FlxBasic {
 	{
 		if (FlxG.keys.justPressed.SPACE) {
 			if (netStream != null) {
-				netStream.close; 
+				netStream.close(); 
 			}
 		}
 	}
