@@ -239,7 +239,7 @@ class PlayState extends MusicBeatState
 
 	public var inCutscene:Bool = false;
 	private var cutsceneSkipped:Bool = false;
-	private var vidBg;
+	private var vidBg:FlxSprite;
 	public var skipCountdown:Bool = false;
 	var songLength:Float = 0;
 
