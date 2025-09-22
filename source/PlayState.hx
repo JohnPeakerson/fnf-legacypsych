@@ -239,6 +239,7 @@ class PlayState extends MusicBeatState
 
 	public var inCutscene:Bool = false;
 	private var cutsceneSkipped:Bool = false;
+	public var vidBg
 	public var skipCountdown:Bool = false;
 	var songLength:Float = 0;
 
@@ -1347,13 +1348,13 @@ class PlayState extends MusicBeatState
 		if(foundFile) {
 			inCutscene = true;
 			cutsceneSkipped = false;
-			var bg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
-			bg.scrollFactor.set();
-			bg.cameras = [camHUD];
-			add(bg);
+			vidBg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+			vidBg.scrollFactor.set();
+			vidBg.cameras = [camHUD];
+			add(vidBg);
 
 			(new FlxVideo(fileName)).finishCallback = function() {
-				remove(bg);
+				remove(vidBg);
 				startAndEnd();
 			}
 			return;
@@ -2177,8 +2178,9 @@ class PlayState extends MusicBeatState
 	{
 		// hey its me cheps i dont know how to organize code so all youre getting is pure shit
 
-		if (inCutscene && !cutsceneSkipped) {
+		if (inCutscene && !cutsceneSkipped && FlxG.keys.justPressed.SPACE) {
 			cutsceneSkipped = true;
+			remove(vidBg);
 			startAndEnd();
 		}
 

@@ -48,7 +48,7 @@ jobs:
       - name: Publish Artifact (Linux)
         uses: actions/upload-artifact@v4
         with:
-          name: linuxBuild
+          name: legacypsych-linux
           path: export/release/linux/bin
 
   buildWindows:
@@ -89,7 +89,7 @@ jobs:
       - name: Publish Artifact (Windows)
         uses: actions/upload-artifact@v4
         with:
-          name: windowsBuild
+          name: legacypsych-windows
           path: export/release/windows/bin
 
   buildMac:
@@ -129,5 +129,5 @@ jobs:
       - name: Publish Artifact (macOS)
         uses: actions/upload-artifact@v4
         with:
-          name: macBuild
+          name: legacypsych-mac
           path: export/release/macos/bin
