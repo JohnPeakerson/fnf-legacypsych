@@ -13,7 +13,7 @@ import flixel.FlxG;
 class FlxVideo extends FlxBasic {
 	#if VIDEOS_ALLOWED
 	public var finishCallback:Void->Void = null;
-	var netStream:NetStream
+	var netStream:NetStream;
 	
 	#if desktop
 	public static var vlcBitmap:VlcBitmap;
