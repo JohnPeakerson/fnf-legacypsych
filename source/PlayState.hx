@@ -238,6 +238,7 @@ class PlayState extends MusicBeatState
 	private var singAnimations:Array<String> = ['singLEFT', 'singDOWN', 'singUP', 'singRIGHT'];
 
 	public var inCutscene:Bool = false;
+	private var cutsceneSkipped:Bool = false;
 	public var skipCountdown:Bool = false;
 	var songLength:Float = 0;
 
@@ -1345,6 +1346,7 @@ class PlayState extends MusicBeatState
 
 		if(foundFile) {
 			inCutscene = true;
+			cutsceneSkipped = false;
 			var bg = new FlxSprite(-FlxG.width, -FlxG.height).makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
 			bg.scrollFactor.set();
 			bg.cameras = [camHUD];
@@ -2173,6 +2175,13 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
+		// hey its me cheps i dont know how to organize code so all youre getting is pure shit
+
+		if (inCutscene && !cutsceneSkipped) {
+			cutsceneSkipped = true;
+			startAndEnd();
+		}
+
 		/*if (FlxG.keys.justPressed.NINE)
 		{
 			iconP1.swapOldIcon();
