@@ -13,7 +13,6 @@ import flixel.FlxG;
 class FlxVideo extends FlxBasic {
 	#if VIDEOS_ALLOWED
 	public var finishCallback:Void->Void = null;
-	private var netStream:NetStream;
 	
 	#if desktop
 	public static var vlcBitmap:VlcBitmap;
@@ -31,7 +30,7 @@ class FlxVideo extends FlxBasic {
 		FlxG.addChildBelowMouse(player);
 		netConnect = new NetConnection();
 		netConnect.connect(null);
-		netStream = new NetStream(netConnect);
+		new netStream = new NetStream(netConnect);
 		netStream.client = {
 			onMetaData: function() {
 				player.attachNetStream(netStream);
@@ -73,8 +72,8 @@ class FlxVideo extends FlxBasic {
 	override public function update(elapsed:Float)
 	{
 		if (FlxG.keys.justPressed.SPACE) {
-			if (netStream != null) {
-				netStream.close(); 
+			if (vlcBitmap != null) {
+				vlcBitmap.stop();
 			}
 		}
 	}
